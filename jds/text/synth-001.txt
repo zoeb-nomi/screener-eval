@@ -1,0 +1,21 @@
+[SYNTHETIC PLACEHOLDER JOB DESCRIPTION — for pipeline testing only, not a real posting]
+
+Nimbus Frontier Labs — AI Product Manager, Model Evaluation
+Location: San Francisco, CA (relocation supported)
+
+Nimbus Frontier Labs is a fictional frontier AI lab (placeholder for pipeline testing).
+We are looking for an AI Product Manager to own evaluation and output-quality for a
+production LLM product. You will define eval rubrics, run structured comparative
+experiments across model versions, build golden datasets with subject-matter experts,
+and turn eval findings into shipped product and prompt changes.
+
+Requirements:
+- 3+ years as a PM on an AI/ML or LLM-powered product
+- Direct ownership of an evaluation or quality program (LLM-as-judge, golden sets,
+  human annotation, or equivalent)
+- Experience with RAG systems, citation/grounding quality, or retrieval evaluation
+- Comfortable reading eval code and interpreting statistical results
+- Track record shipping measurable product improvements from eval findings
+
+Nice to have: open-source eval tooling, published benchmark work, experience in a
+regulated or high-stakes domain (finance, legal, healthcare, tax).

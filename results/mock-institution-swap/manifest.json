@@ -1,0 +1,134 @@
+{
+  "run_id": "mock-institution-swap",
+  "mock": true,
+  "ablation": "institution_swap",
+  "reps": 5,
+  "seed": 744478357,
+  "started_at": "2026-09-11T10:47:27.151514+00:00",
+  "finished_at": "2026-09-11T10:47:27.192918+00:00",
+  "n_calls": 420,
+  "n_parse_errors": 0,
+  "total_est_cost_usd": 0.7089,
+  "models": [
+    {
+      "key": "claude-haiku-4-5",
+      "provider": "anthropic",
+      "model_id": "claude-haiku-4-5",
+      "price_input_per_1m": 1.0,
+      "price_output_per_1m": 5.0
+    },
+    {
+      "key": "gpt-5-mini",
+      "provider": "openai",
+      "model_id": "gpt-5-mini",
+      "reasoning_effort": "low",
+      "price_input_per_1m": 0.25,
+      "price_output_per_1m": 2.0
+    }
+  ],
+  "jd_ids": [
+    "openai-pm-api-agents-001",
+    "openai-pm-sensitive-deployments-001",
+    "openai-pm-api-infrastructure-001",
+    "openai-pm-safety-measurement-001",
+    "openai-pm-financial-engineering-001",
+    "openai-pm-core-models-001",
+    "anthropic-pm-claude-code-model-perf-001",
+    "anthropic-pm-claude-science-001",
+    "anthropic-pm-beneficial-deployments-001",
+    "deepmind-pm-cyber-security-001",
+    "deepmind-pm-robotics-security-001",
+    "deepmind-pm-gemini-post-training-001",
+    "google-pm-ai-acceleration-001",
+    "google-pm-ai-search-growth-001",
+    "meta-pm-evals-improvement-001",
+    "meta-pm-machine-learning-001",
+    "microsoft-pm-ai-experiences-001",
+    "amazon-pm-ai-ml-training-annapurna-001",
+    "amazon-pm-ai-studios-001",
+    "nvidia-pm-agentic-ai-kernel-gen-001",
+    "nvidia-pm-ai-platform-inference-001"
+  ],
+  "jd_sha256": {
+    "openai-pm-api-agents-001": "62935ac5abb71b63a7f1590a81ef6174f122014ec17d31346bddad5cf96457e9",
+    "openai-pm-sensitive-deployments-001": "0c31eedb980a63735272d04196517f10616b5900293e8c70e39836f6c9f65b5f",
+    "openai-pm-api-infrastructure-001": "90ac6d0384c0eabc5ef4225506a3c1f34928299c4012bceae5348e3552a58e71",
+    "openai-pm-safety-measurement-001": "d1333871b48bc1a4e2493fe9479c7340e9fe5a021e8b1153c00d702ac7c7c236",
+    "openai-pm-financial-engineering-001": "819f1c8ec4765145556cfac451e9a37a97aa1e5a3c00ea1bc6bde254c568ffdc",
+    "openai-pm-core-models-001": "de689a6d4fbfd50915c8346321352173371fb521df66e6de58fd70fcf175b662",
+    "anthropic-pm-claude-code-model-perf-001": "1071681246c358e4ef2f76cf85c348017d2efb3514b19e0bcb3d0b468dc71764",
+    "anthropic-pm-claude-science-001": "16705dbb674c7d3b8d83798e19b59b1123a9ed1e832a6d14c1ad43608499dcc1",
+    "anthropic-pm-beneficial-deployments-001": "40c18ee4f5057aa3d707adb317ca2687a2399e32f91003320262bbfe471b5c0b",
+    "deepmind-pm-cyber-security-001": "e9ae0296aab3f5391b784066ee2cecba96f86e51f864dc831d5776c8acf05445",
+    "deepmind-pm-robotics-security-001": "d76e7f760a506b6b0d5e747989b461eba1f4c634371d155b42773ba5615703a5",
+    "deepmind-pm-gemini-post-training-001": "6bacc5b4190ef543e64a7bcb00b1901960eb93b27c951646561beedab7d95ede",
+    "google-pm-ai-acceleration-001": "35e0a7c15fdfa6a78799516130148bb6d66e9ad8fa1de0190371a772c973f50a",
+    "google-pm-ai-search-growth-001": "7ab91caf5baeea55585fc1b845010d31eca0e894819014a3eb39db49fec8f463",
+    "meta-pm-evals-improvement-001": "3b44f25e4a6ac9ec0760cf17158bbc581231919d1fa39bc8b46edec005a43ad6",
+    "meta-pm-machine-learning-001": "85032e9d4bf0ca3a1f04db6efad838ebed3055f12c0fcf2d341de27f5c2633f1",
+    "microsoft-pm-ai-experiences-001": "b0ae220f2edd58c867531f290d734dc283100623537f6678f51aa1a554b5a480",
+    "amazon-pm-ai-ml-training-annapurna-001": "04186ebf0d402470d0ef2c3a83a95d1800e47cf1e190d83a08cd6f5c5a684476",
+    "amazon-pm-ai-studios-001": "0d17adeb247d6414b831aa8856fa421869644cae875fb3c2fcd64a8c24d8958c",
+    "nvidia-pm-agentic-ai-kernel-gen-001": "d85b7046ce25252b1c3a2c6279997ae88380fad5ae3baa8e27f67c5e3a5a807f",
+    "nvidia-pm-ai-platform-inference-001": "f64b97b4dd51d3e89ad1a7551a69aaead3bd504e99f4326fd74b687e6d685502"
+  },
+  "resume_sha256": {
+    "A": "a44c3832313cc2ee128080755a769dad4ac58efb539ce2236ece187c6aca299c",
+    "B": "4aba6e0d4c3d35b3c1fa50f59eb36a24fd290e949a2542c6aea9892b404a7e99"
+  },
+  "resume_paths": {
+    "A": "resume/v4_2_A.txt",
+    "B": "resume/v4_2_B_institution_swap.txt"
+  },
+  "config_snapshot": {
+    "run": {
+      "seed": null,
+      "temperature": null,
+      "max_output_tokens": 2000
+    },
+    "models": [
+      {
+        "key": "claude-haiku-4-5",
+        "provider": "anthropic",
+        "model_id": "claude-haiku-4-5",
+        "price_input_per_1m": 1.0,
+        "price_output_per_1m": 5.0
+      },
+      {
+        "key": "gpt-5-mini",
+        "provider": "openai",
+        "model_id": "gpt-5-mini",
+        "reasoning_effort": "low",
+        "price_input_per_1m": 0.25,
+        "price_output_per_1m": 2.0
+      }
+    ],
+    "ablations": [
+      {
+        "key": "institution_swap",
+        "description": "B replaces every employer/institution name with a fictional, non-existent organization of matching description (config/swap_map.yaml). Replicates the institution-name-signal design in Iso, Pezeshkpour, Bhutani & Hruschka / Megagon Labs (arXiv 2503.19182).\n",
+        "enabled": true
+      },
+      {
+        "key": "evidence_links",
+        "description": "B strips every URL (GitHub, portfolio, LinkedIn, repo links) from the r\u00e9sum\u00e9 text.\n",
+        "enabled": true
+      }
+    ],
+    "analysis": {
+      "bootstrap_resamples": 10000,
+      "ci_level": 0.95,
+      "alpha": 0.05,
+      "power": 0.8,
+      "default_mde": 5.0
+    },
+    "paths": {
+      "resume_a": "resume/v4_2_A.txt",
+      "jd_index": "jds/index.yaml",
+      "jd_text_dir": "jds/text",
+      "swap_map": "config/swap_map.yaml",
+      "results_dir": "results",
+      "reports_dir": "reports"
+    }
+  }
+}

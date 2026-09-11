@@ -1,0 +1,90 @@
+ZOEB NOMI​
+Bengaluru, India  ·  +91 86008 16072  ·  zoeb.nomi@gmail.com   
+AI Product Manager  ·  LLM Evaluation, Ground-Truth Data & RAG Quality         linkedin.com/in/zoebnomi  ·  zoebnomi.com  · github.com/zoeb-nomi 
+SUMMARY 
+AI Product Manager owning LLM output quality for a production tax-research and filing platform, where a wrong citation or 
+a wrong line on a return is a compliance risk rather than a UX bug. Built the full quality loop behind the product: a 
+self-maintaining 270K+-record primary-law corpus, human-expert golden datasets (Keystone benchmark; Project Evals - tax 
+analysts authoring 2,000 reviewed datasets), & the evaluation layer that turns both into shipped fixes. Also built 
+CrossSource, an open-source legal-RAG eval harness. Previously shipped a $2.7M MRR enterprise product. 
+EXPERIENCE 
+Product Manager, Instead​
+Sept 2025 – Present 
+AI-native tax research, planning & filing platform; first new entrant in 20 years to clear IRS e-file approval alongside the incumbents - 
+2,540 federal, state, and local forms supported 
+•​Own end-to-end output quality for production tax-research LLM, where wrong citations are a compliance risk: built the 
+evaluation layer that makes quality measurable -  flag → classify-by-failure-mode → weekly-review citation loop & 
+4-dimension rubric (answerability, accuracy, citation quality, actionability) scored via LLM-as-judge with human validation 
+- so regressions are caught before release, not by clients. Holds ~95% citation accuracy on the golden eval set. 
+•​Grounded the model roadmap in evidence, not opinion: structured comparative experiments against three competing 
+tax-AI research platforms (50+ scenarios, 5 rounds) and a “pipeline-collapse” eval testing whether the multi-step agent 
+workflow (Tax Snapshot → Strategies → Memo → QC) stays coherent and self-honest end-to-end - results set 
+model-config and prompt decisions each round. 
+•​Pressure-tested the platform against the public TaxCalcBench v2 suite - 1,200+ agent runs (50 cases, federal + 5 states) 
+through a user-flow simulation harness across frontier models from four providers, permuting extended thinking, web 
+search, and prompt style with full accuracy, latency, cost, and tool-call telemetry - to locate exactly where and why 
+accuracy breaks; an LLM analyst→judge pipeline distilled the evidence into 7 shipped product improvements targeting 
+those failure modes. 
+•​Built Keystone, Instead’s internal benchmark: a 75-case, 7-form golden set (1040/1120S/1065/1120/1041/990/5471 × 
+3 complexity tiers × federal/CA/NY), volume-weighted to real filing distribution, with its own eval harness and metric 
+registry (953 scorecards; strict/lenient scoring; per-tool telemetry across 27 tools). The baseline run located a “complexity 
+cliff” that now sets the improvement roadmap. 
+•​Designed and run Project Evals, Instead’s human-expert ground-truth program: scenarios seeded from government 
+e-file certification test cases (real-world-derived, PII-free) are worked end-to-end by in-house tax analysts simulating a 
+firm-client engagement (~20 tasks per case: return, tax-saving plan, workbook, memo, client email), with tax-manager 
+review as the acceptance gate - 2,000 human-authored, reviewed datasets targeted, benchmarking accuracy per task type 
+and seeding model training. 
+•​Built the retrieval foundation the product’s answers stand on - and made it self-maintaining: a 270K+-record corpus of 
+first-party primary law (federal and state statutes, regulations, case law and DoR rulings, plus local tax) spanning 230+ 
+source types across all 51 jurisdictions, fed by a config-driven agentic ingestion pipeline (browser-agent collection → 
+scraping → multi-model LLM cleaning and enrichment → MongoDB) that re-scrapes sources daily on update, so no one 
+maintains the corpus by hand. Wrote the pipeline PRDs and schemas, built a Python fetchability harness across 378 
+sources, and led ~139K-document remediation - because retrieval quality caps answer quality. 
+•​Eliminated the product’s most dangerous failure mode - plausible-but-wrong citations that read as authoritative - by 
+attaching document ID and sub-type to every cited source, and gave every strategy a legal backbone: a Legal Support 
+Matrix across 160+ tax strategies (Tax Court cases, IRS rulings, audit guidance) surfaced through Source Explorer, 
+command-palette search with cross-type related sources, so practitioners can verify any claim in seconds. 
+•​Cut workflow latency ~90% (10–15 min → under a minute) by scoping incremental edits to changed inputs only - turning 
+a batch process into an interactive tool practitioners iterate with - & hardened mid-workflow model-availability handling. 
+•​Mapped Instead’s e-file coverage against competitors across 6,201 forms in every US jurisdiction (2,540 supported), 
+giving the filing roadmap a per-jurisdiction gap map. 
+ 
+Product Manager, Multiplier​
+Mar 2025 – Sept 2025 
+Global employment platform enabling compliant hiring across 150+ countries 
+•​Owned the Value-Added Services vertical (procurement, BGV, ITSM, partnerships) and turned it into a revenue line: 
+$100K incremental revenue, a 47% efficiency gain from new SOPs, and the PosterElite compliance partnership launched 
+end-to-end in 21 days. 
+
+Product Manager, Keka HR - 3 roles, 2 promotions​
+Dec 2022 – Mar 2025 
+India’s leading HR technology platform; $25M+ ARR CoreHR suite 
+•​Built the Background Verification module zero-to-one (Checkr API) to open Keka’s first international market: onboarded 
+28 US enterprise clients and $2.7M MRR, anchoring the company’s US expansion. 
+•​Shipped 6 SSO integrations (Azure AD / Google Workspace) to remove enterprise adoption blockers - a 27% adoption lift 
+and $121K upsell; led the Exit Module revamp, cutting offboarding time 28% and lifting CSAT 80%. 
+•​Ran GTM enablement at scale - product training and client webinars (4,400+ attendees) generating 500+ upsell requests 
+and a 30% feature-adoption lift across CoreHR modules - because shipped features only count when clients adopt them. 
+ 
+Business Analyst, Hurix Digital​
+Oct 2021 – Oct 2022 
+•​Led agile transformation of LMS development (43% faster delivery); drove 31% growth in customer conversions via a 
+video-learning rollout. 
+OPEN-SOURCE PROJECTS 
+CrossSource - eval harness for citation-level reliability of legal RAG​
+github.com/zoeb-nomi/crosssource 
+•​Built to prove eval craft in the open, on a domain where citations carry professional consequences: MIT-licensed and 
+reproducible - 25 human-authored golden questions over 22 public court opinions; citation precision/recall with a failure 
+taxonomy, faithfulness, and answer relevance via an LLM judge blind-validated at 100% human agreement (human 
+labeling also caught a harness bug the judge missed). Citation-discipline prompting lifted precision 0.981 → 0.994; recall 
+(0.760) is retrieval-capped, not generation-capped. 
+SKILLS & TOOLS 
+AI / LLM:  LLM evaluation · eval design · evaluation frameworks · agent evaluation · agentic workflows · LLM-as-a-judge · 
+golden datasets · ground-truth & dataset design · human-expert annotation programs · human-in-the-loop · PII-safe data 
+strategy · RAG evaluation · retrieval quality · citation precision/recall · failure-mode analysis · model benchmarking · 
+data-pipeline automation · prompt engineering · latency/cost optimization · Python eval harnesses · MCP 
+Product:  AI product management · product strategy · zero-to-one · enterprise B2B SaaS · roadmapping · API & platform PM · 
+GTM · data-driven prioritization 
+Tools:  Python · Linear · Figma · Metabase · Pendo · MongoDB · Claude / Claude Code · n8n · Cursor · Git 
+EDUCATION 
+STOA - General Management Program (2022)      ·      MIT Aurangabad - B.E., Mechanical Engineering (2019) 

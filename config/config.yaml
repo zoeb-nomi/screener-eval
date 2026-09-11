@@ -1,0 +1,74 @@
+# screener-eval config. Change model ids / prices here — nothing else in the codebase
+# should need editing to swap models or providers.
+
+run:
+  seed: null              # null = new random seed each run, logged into manifest.json
+  temperature: null       # null = provider default (not set on the API call)
+  # Base output-token budget. scripts/run_screen.py::resolved_max_tokens() enforces a
+  # per-provider FLOOR on top of this regardless of what's set here (openai >= 2000,
+  # anthropic >= 1500) — see the gpt-5-mini comment below for why. Raise this if you
+  # want more headroom than the floor for either provider.
+  max_output_tokens: 2000
+  # Parallel workers for scripts/run_screen.py (ThreadPoolExecutor). Override
+  # per-invocation with --concurrency N. A real run of 418 sequential gpt-5-mini
+  # calls took 78 min (~10s/call); concurrency=8 is the default because that's
+  # comfortably under both providers' per-account rate limits for these models
+  # while still cutting a full run to under 15 min. Raise it if your account's
+  # limits allow more; 429/overloaded responses are retried with backoff
+  # regardless (see call_with_backoff in run_screen.py) so a too-high value
+  # degrades to slower rather than broken.
+  concurrency: 8
+
+models:
+  - key: claude-haiku-4-5
+    provider: anthropic
+    model_id: "claude-haiku-4-5"
+    # USD per 1,000,000 tokens. VERIFY against https://www.anthropic.com/pricing before a
+    # real (non---mock) run — placeholders below are Haiku-tier estimates, not confirmed.
+    price_input_per_1m: 1.00
+    price_output_per_1m: 5.00
+  - key: gpt-5-mini
+    provider: openai
+    model_id: "gpt-5-mini"
+    # gpt-5-mini is a REASONING model: hidden reasoning tokens are drawn from the same
+    # max_completion_tokens budget as the visible JSON answer. A small budget can be
+    # entirely consumed by reasoning, leaving an empty `message.content` — this is what
+    # broke a real pilot run (see git history / PreUpgrade review). Mitigations in code:
+    # a 2000-token floor on max_completion_tokens (resolved_max_tokens(), above) and
+    # reasoning_effort below to shrink the reasoning budget (dropped automatically, and
+    # the call retried once, if the model/account rejects the param).
+    # Alternatives to try if this model keeps producing empty/unparseable output:
+    #   - gpt-4.1-mini   (NOT a reasoning model — no hidden reasoning tokens to worry about)
+    #   - gpt-5-mini with reasoning_effort left at "low" (this default) rather than "medium"/"high"
+    reasoning_effort: "low"
+    # VERIFY against https://openai.com/api/pricing before a real run.
+    price_input_per_1m: 0.25
+    price_output_per_1m: 2.00
+
+ablations:
+  - key: institution_swap
+    description: >
+      B replaces every employer/institution name with a fictional, non-existent
+      organization of matching description (config/swap_map.yaml). Replicates the
+      institution-name-signal design in Iso, Pezeshkpour, Bhutani & Hruschka /
+      Megagon Labs (arXiv 2503.19182).
+    enabled: true
+  - key: evidence_links
+    description: >
+      B strips every URL (GitHub, portfolio, LinkedIn, repo links) from the résumé text.
+    enabled: true
+
+analysis:
+  bootstrap_resamples: 10000
+  ci_level: 0.95
+  alpha: 0.05
+  power: 0.80
+  default_mde: 5.0   # fit_score points, for analysis/pilot.py
+
+paths:
+  resume_a: resume/v4_2_A.txt
+  jd_index: jds/index.yaml
+  jd_text_dir: jds/text
+  swap_map: config/swap_map.yaml
+  results_dir: results
+  reports_dir: reports

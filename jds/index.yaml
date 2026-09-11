@@ -1,0 +1,314 @@
+# JD registry. jds/text/<jd_id>.txt is GITIGNORED for real postings (copyright —
+# the public repo ships this index (URL + hash) but not the scraped text). The three
+# `synthetic: true` placeholder entries below point at jds/text/synth-*.txt, which
+# ARE committed — they're the only JD text that ships in the public repo/zip, so
+# `make mock` / `make pilot-mock` work out of the box with no real JDs collected.
+#
+# Real JDs collected 2026-09-10: census of currently-open, US-based/US-remote,
+# mid-level (excludes Director/VP/Head/Principal/"Senior Staff") AI/ML/LLM Product
+# Manager roles at named large-tech and frontier-lab employers. See
+# jds/COLLECTION_NOTES.md for method, boards that blocked, and level-filtering
+# judgment calls.
+
+jds:
+  # ---- Synthetic placeholders (not real postings) — text committed, used by
+  # ---- `make mock` / `make pilot-mock` so the pipeline runs with zero real JDs ----
+  - jd_id: synth-001
+    employer: "Nimbus Frontier Labs"
+    employer_class: synthetic
+    title: "AI Product Manager, Model Evaluation"
+    level_signal: "synthetic placeholder — not a real posting"
+    location: "San Francisco, CA (relocation supported)"
+    url: null
+    retrieved_at: "2026-09-10"
+    synthetic: true
+    sha256: "598207cb3a0aaa53bbf70055ceaf9e593268463ae4cf2532c546a8f9d4c1c448"
+    word_count: 163
+    sponsorship_note: "n/a (synthetic)"
+
+  - jd_id: synth-002
+    employer: "Meridian Cloud Systems"
+    employer_class: synthetic
+    title: "Product Manager, AI Platform"
+    level_signal: "synthetic placeholder — not a real posting"
+    location: "Seattle, WA"
+    url: null
+    retrieved_at: "2026-09-10"
+    synthetic: true
+    sha256: "246fa82aac0eac7abed3b2bf7c6690c8f1bcdcfffd181a0c10c585572b44443a"
+    word_count: 133
+    sponsorship_note: "n/a (synthetic)"
+
+  - jd_id: synth-003
+    employer: "Halden Systems"
+    employer_class: synthetic
+    title: "AI Product Manager"
+    level_signal: "synthetic placeholder — not a real posting"
+    location: "Austin, TX (open to remote US)"
+    url: null
+    retrieved_at: "2026-09-10"
+    synthetic: true
+    sha256: "27be359fda04971d89afcb18dd36bde37158926f8f3465f0b9b486e6c0f044f3"
+    word_count: 140
+    sponsorship_note: "n/a (synthetic)"
+
+
+  # ---- OpenAI (frontier_lab) — 6 collected of 11 open PM postings found ----
+  - jd_id: openai-pm-api-agents-001
+    employer: "OpenAI"
+    employer_class: frontier_lab
+    title: "Product Manager, API Agents"
+    level_signal: "Product Manager (no seniority modifier in title; posting asks for 5+ years PM experience)"
+    location: "San Francisco, CA"
+    url: "https://jobs.ashbyhq.com/openai/fc38c6bf-5330-435c-99b6-1bcf1f5829a8"
+    retrieved_at: "2026-09-10"
+    sha256: "62935ac5abb71b63a7f1590a81ef6174f122014ec17d31346bddad5cf96457e9"
+    word_count: 501
+    sponsorship_note: "not recorded"
+
+  - jd_id: openai-pm-sensitive-deployments-001
+    employer: "OpenAI"
+    employer_class: frontier_lab
+    title: "Product Manager, Sensitive Deployments"
+    level_signal: "Product Manager (no seniority modifier in title)"
+    location: "San Francisco, CA"
+    url: "https://jobs.ashbyhq.com/openai/05a8cae8-81bd-4f7b-bc48-41ef1bd67e5d"
+    retrieved_at: "2026-09-10"
+    sha256: "0c31eedb980a63735272d04196517f10616b5900293e8c70e39836f6c9f65b5f"
+    word_count: 476
+    sponsorship_note: "not recorded"
+
+  - jd_id: openai-pm-api-infrastructure-001
+    employer: "OpenAI"
+    employer_class: frontier_lab
+    title: "Product Manager, API Infrastructure"
+    level_signal: "Product Manager (no seniority modifier in title)"
+    location: "San Francisco, CA"
+    url: "https://jobs.ashbyhq.com/openai/7ffa2a14-fa9c-46cb-a30a-1f7a35ae904a"
+    retrieved_at: "2026-09-10"
+    sha256: "90ac6d0384c0eabc5ef4225506a3c1f34928299c4012bceae5348e3552a58e71"
+    word_count: 607
+    sponsorship_note: "not recorded"
+
+  - jd_id: openai-pm-safety-measurement-001
+    employer: "OpenAI"
+    employer_class: frontier_lab
+    title: "Product Manager, Safety Measurement"
+    level_signal: "Product Manager (posting asks for 6+ years PM/related experience)"
+    location: "San Francisco, CA"
+    url: "https://jobs.ashbyhq.com/openai/fbc7ebaf-3a26-406d-9ff6-f166f3e246a2"
+    retrieved_at: "2026-09-10"
+    sha256: "d1333871b48bc1a4e2493fe9479c7340e9fe5a021e8b1153c00d702ac7c7c236"
+    word_count: 567
+    sponsorship_note: "not recorded"
+
+  - jd_id: openai-pm-financial-engineering-001
+    employer: "OpenAI"
+    employer_class: frontier_lab
+    title: "Product Manager, Financial Engineering"
+    level_signal: "Product Manager (posting asks for 6+ years PM/related experience)"
+    location: "San Francisco, CA"
+    url: "https://jobs.ashbyhq.com/openai/0f4da2b4-df8a-4560-809d-d0a6ac1ad9bc"
+    retrieved_at: "2026-09-10"
+    sha256: "819f1c8ec4765145556cfac451e9a37a97aa1e5a3c00ea1bc6bde254c568ffdc"
+    word_count: 574
+    sponsorship_note: "not recorded"
+
+  - jd_id: openai-pm-core-models-001
+    employer: "OpenAI"
+    employer_class: frontier_lab
+    title: "Product Manager, Core Models"
+    level_signal: "Product Manager (no seniority modifier in title; \"deep expertise in product management\" required)"
+    location: "San Francisco, CA"
+    url: "https://jobs.ashbyhq.com/openai/33b8effb-b048-4934-a279-87fff192a330"
+    retrieved_at: "2026-09-10"
+    sha256: "de689a6d4fbfd50915c8346321352173371fb521df66e6de58fd70fcf175b662"
+    word_count: 642
+    sponsorship_note: "not recorded"
+
+  # ---- Anthropic (frontier_lab) — 3 collected of 16 open PM postings found ----
+  - jd_id: anthropic-pm-claude-code-model-perf-001
+    employer: "Anthropic"
+    employer_class: frontier_lab
+    title: "Product Manager, Claude Code Model Performance"
+    level_signal: "Product Manager (posting: \"2+ years in product management, or equivalent experience\")"
+    location: "San Francisco, CA / Seattle, WA"
+    url: "https://job-boards.greenhouse.io/anthropic/jobs/5247640008"
+    retrieved_at: "2026-09-10"
+    sha256: "1071681246c358e4ef2f76cf85c348017d2efb3514b19e0bcb3d0b468dc71764"
+    word_count: 814
+    sponsorship_note: "not recorded"
+
+  - jd_id: anthropic-pm-claude-science-001
+    employer: "Anthropic"
+    employer_class: frontier_lab
+    title: "Product Manager, Claude Science"
+    level_signal: "Product Manager (preferred: 8+ years in product management or equivalent)"
+    location: "San Francisco, CA / New York, NY / Seattle, WA"
+    url: "https://job-boards.greenhouse.io/anthropic/jobs/5394887008"
+    retrieved_at: "2026-09-10"
+    sha256: "16705dbb674c7d3b8d83798e19b59b1123a9ed1e832a6d14c1ad43608499dcc1"
+    word_count: 1215
+    sponsorship_note: "not recorded"
+
+  - jd_id: anthropic-pm-beneficial-deployments-001
+    employer: "Anthropic"
+    employer_class: frontier_lab
+    title: "Product Manager, Beneficial Deployments (Labs)"
+    level_signal: "Product Manager (preferred: 5+ years in product management or equivalent operating roles)"
+    location: "San Francisco, CA / New York, NY"
+    url: "https://job-boards.greenhouse.io/anthropic/jobs/5407337008"
+    retrieved_at: "2026-09-10"
+    sha256: "40c18ee4f5057aa3d707adb317ca2687a2399e32f91003320262bbfe471b5c0b"
+    word_count: 685
+    sponsorship_note: "not recorded"
+
+  # ---- Google DeepMind (frontier_lab) — 3 collected of ~4 open mid-level PM postings found ----
+  - jd_id: deepmind-pm-cyber-security-001
+    employer: "Google DeepMind"
+    employer_class: frontier_lab
+    title: "Product Manager, Cyber Security, DeepMind"
+    level_signal: "Product Manager (no seniority modifier; 8 years product management/related experience min. qual.)"
+    location: "Mountain View, CA"
+    url: "https://www.google.com/about/careers/applications/jobs/results/102366725718057670-product-manager-cyber-security-deepmind"
+    retrieved_at: "2026-09-10"
+    sha256: "e9ae0296aab3f5391b784066ee2cecba96f86e51f864dc831d5776c8acf05445"
+    word_count: 599
+    sponsorship_note: "not recorded"
+
+  - jd_id: deepmind-pm-robotics-security-001
+    employer: "Google DeepMind"
+    employer_class: frontier_lab
+    title: "Senior Product Manager, Robotics Security, DeepMind"
+    level_signal: "Senior Product Manager (posting's own title)"
+    location: "Mountain View, CA / New York, NY / San Francisco, CA"
+    url: "https://www.google.com/about/careers/applications/jobs/results/139417757165724358-senior-product-manager-robotics-security-deepmind"
+    retrieved_at: "2026-09-10"
+    sha256: "d76e7f760a506b6b0d5e747989b461eba1f4c634371d155b42773ba5615703a5"
+    word_count: 603
+    sponsorship_note: "not recorded"
+
+  - jd_id: deepmind-pm-gemini-post-training-001
+    employer: "Google DeepMind"
+    employer_class: frontier_lab
+    title: "Senior Product Manager, Gemini Post Training, DeepMind"
+    level_signal: "Senior Product Manager (posting's own title)"
+    location: "Mountain View, CA"
+    url: "https://www.google.com/about/careers/applications/jobs/results/90975675732632262-senior-product-manager-gemini-post-training-deepmind"
+    retrieved_at: "2026-09-10"
+    sha256: "6bacc5b4190ef543e64a7bcb00b1901960eb93b27c951646561beedab7d95ede"
+    word_count: 575
+    sponsorship_note: "not recorded"
+
+  # ---- Google (large_tech, non-DeepMind) — 2 collected, sampled from 94 mid-level "Product Manager" hits ----
+  - jd_id: google-pm-ai-acceleration-001
+    employer: "Google"
+    employer_class: large_tech
+    title: "Product Manager, AI Acceleration"
+    level_signal: "Mid (Google's own \"Mid\" level tag on the posting)"
+    location: "New York, NY / San Jose, CA"
+    url: "https://www.google.com/about/careers/applications/jobs/results/101801606806151878-product-manager-ai-acceleration"
+    retrieved_at: "2026-09-10"
+    sha256: "35e0a7c15fdfa6a78799516130148bb6d66e9ad8fa1de0190371a772c973f50a"
+    word_count: 527
+    sponsorship_note: "not recorded"
+
+  - jd_id: google-pm-ai-search-growth-001
+    employer: "Google"
+    employer_class: large_tech
+    title: "Product Manager, AI Google Search Growth"
+    level_signal: "Mid (Google's own \"Mid\" level tag on the posting)"
+    location: "Mountain View, CA"
+    url: "https://www.google.com/about/careers/applications/jobs/results/87798359858782918-product-manager-ai-google-search-growth"
+    retrieved_at: "2026-09-10"
+    sha256: "7ab91caf5baeea55585fc1b845010d31eca0e894819014a3eb39db49fec8f463"
+    word_count: 545
+    sponsorship_note: "not recorded"
+
+  # ---- Meta (large_tech) — 2 collected, sampled from 32 "Product Manager" hits under Product Management team ----
+  - jd_id: meta-pm-evals-improvement-001
+    employer: "Meta"
+    employer_class: large_tech
+    title: "Product Manager, Evals & Improvement"
+    level_signal: "Product Manager (posting: \"5+ years relevant experience with at least 2 years in Product Management\")"
+    location: "Menlo Park, CA (+1 location)"
+    url: "https://www.metacareers.com/profile/job_details/1842433873407112"
+    retrieved_at: "2026-09-10"
+    sha256: "3b44f25e4a6ac9ec0760cf17158bbc581231919d1fa39bc8b46edec005a43ad6"
+    word_count: 544
+    sponsorship_note: "not recorded"
+
+  - jd_id: meta-pm-machine-learning-001
+    employer: "Meta"
+    employer_class: large_tech
+    title: "Product Manager, Machine Learning"
+    level_signal: "Product Manager (posting: \"8+ years product management ... experience\")"
+    location: "Menlo Park, CA"
+    url: "https://www.metacareers.com/profile/job_details/691715269835265"
+    retrieved_at: "2026-09-10"
+    sha256: "85032e9d4bf0ca3a1f04db6efad838ebed3055f12c0fcf2d341de27f5c2633f1"
+    word_count: 442
+    sponsorship_note: "not recorded"
+
+  # ---- Microsoft (large_tech) — 1 collected; many more Senior/Principal AI PM postings seen but not scraped ----
+  - jd_id: microsoft-pm-ai-experiences-001
+    employer: "Microsoft"
+    employer_class: large_tech
+    title: "Senior Product Manager, AI Experiences"
+    level_signal: "Senior Product Manager; role type \"Individual Contributor\", level \"Product Management IC4\""
+    location: "Redmond, WA (+1, incl. New York, NY)"
+    url: "https://apply.careers.microsoft.com/careers?domain=microsoft.com&query=Product+Manager+AI (job number 200046924)"
+    retrieved_at: "2026-09-10"
+    sha256: "b0ae220f2edd58c867531f290d734dc283100623537f6678f51aa1a554b5a480"
+    word_count: 669
+    sponsorship_note: "not recorded"
+
+  # ---- Amazon (large_tech) — 2 collected ----
+  - jd_id: amazon-pm-ai-ml-training-annapurna-001
+    employer: "Amazon"
+    employer_class: large_tech
+    title: "Sr. Product Manager - AI/ML Training, Annapurna Labs"
+    level_signal: "Sr. Product Manager (posting's own title)"
+    location: "Seattle, WA / Cupertino, CA"
+    url: "https://www.amazon.jobs/en/jobs/10526739/sr-product-manager-ai-ml-training-annapurna-labs"
+    retrieved_at: "2026-09-10"
+    sha256: "04186ebf0d402470d0ef2c3a83a95d1800e47cf1e190d83a08cd6f5c5a684476"
+    word_count: 236
+    sponsorship_note: "not recorded"
+
+  - jd_id: amazon-pm-ai-studios-001
+    employer: "Amazon"
+    employer_class: large_tech
+    title: "Sr. Product Manager - Tech, AI Studios"
+    level_signal: "Sr. Product Manager (posting's own title)"
+    location: "Culver City, CA"
+    url: "https://www.amazon.jobs/en/jobs/10487250/sr-product-manager-tech-ai-studios"
+    retrieved_at: "2026-09-10"
+    sha256: "0d17adeb247d6414b831aa8856fa421869644cae875fb3c2fcd64a8c24d8958c"
+    word_count: 249
+    sponsorship_note: "not recorded"
+
+  # ---- NVIDIA (large_tech) — 2 collected, sampled from ~11 mid/senior AI PM hits on page 1 of a broad search ----
+  - jd_id: nvidia-pm-agentic-ai-kernel-gen-001
+    employer: "NVIDIA"
+    employer_class: large_tech
+    title: "Product Manager, AI Platform SW - Agentic AI Kernel Generation"
+    level_signal: "Product Manager (posting: \"7+ years of technical product management\"; leveled internally as L4/L5)"
+    location: "Santa Clara, CA"
+    url: "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Product-Manager--AI-Platform-SW---Agentic-AI-Kernel-Generation_JR2016992"
+    retrieved_at: "2026-09-10"
+    sha256: "d85b7046ce25252b1c3a2c6279997ae88380fad5ae3baa8e27f67c5e3a5a807f"
+    word_count: 564
+    sponsorship_note: "not recorded"
+
+  - jd_id: nvidia-pm-ai-platform-inference-001
+    employer: "NVIDIA"
+    employer_class: large_tech
+    title: "Senior Product Manager - AI Platform Inference"
+    level_signal: "Senior Product Manager (posting's own title; 6+ years technical PM experience)"
+    location: "Santa Clara, CA"
+    url: "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Product-Manager---AI-Platform-Inference_JR2022724"
+    retrieved_at: "2026-09-10"
+    sha256: "f64b97b4dd51d3e89ad1a7551a69aaead3bd504e99f4326fd74b687e6d685502"
+    word_count: 447
+    sponsorship_note: "not recorded"

@@ -1,0 +1,19 @@
+[SYNTHETIC PLACEHOLDER JOB DESCRIPTION — for pipeline testing only, not a real posting]
+
+Meridian Cloud Systems — Product Manager, AI Platform (Large Tech, placeholder)
+Location: Seattle, WA
+
+Meridian Cloud Systems is a fictional large-tech company (placeholder for pipeline
+testing). We're hiring a Product Manager for our AI platform team, responsible for
+the quality and reliability of generative AI features across our consumer and
+enterprise product lines.
+
+Requirements:
+- 4+ years of product management experience, 2+ years on AI/ML-adjacent products
+- Experience defining and shipping quality metrics for a generative AI feature
+- Cross-functional leadership across ML, infra, and design
+- Data-driven decision-making; comfortable with A/B tests and statistical rigor
+- Strong written communication; experience writing PRDs and specs
+
+Nice to have: experience with enterprise B2B SaaS, background in a compliance-
+sensitive vertical, hands-on scripting/SQL ability.

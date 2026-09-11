@@ -1,0 +1,11 @@
+{
+  "name": "screener-eval-parser-test-node",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node-side runners for the two npm résumé parsers used in parser_test/run_parsers.py.",
+  "dependencies": {
+    "resume-parser": "1.1.0",
+    "resumix": "1.1.2",
+    "mime": "1.6.0"
+  }
+}

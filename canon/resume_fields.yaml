@@ -1,0 +1,100 @@
+# Ground-truth fields extracted by hand from resume/v4_2_A.txt (the source of resume/v4_2.pdf).
+# Used by parser_test/run_parsers.py to score each parser's output. See reports/parser_test.md
+# for the exact matching/scoring rules (missing / wrong / garbled).
+#
+# 2026-09-10 (v4.1, real PDF): resume/v4_1_real.pdf (then named resume/v4_1.pdf) became the
+# REAL résumé PDF (Google Docs export, the file Zoeb actually uploads to ATSs), replacing an
+# earlier text-only reconstruction. In that file, the header's LinkedIn/Portfolio/GitHub
+# profile links were hyperlink ANNOTATIONS on the bare words "LinkedIn"/"Portfolio"/"GitHub" —
+# no URL characters anywhere in the visible text layer, so every text-extraction tool
+# (pdftotext, PyMuPDF .get_text(), pdfminer.six) came up MISSING on all three link fields, and
+# the evidence-links ablation (scripts/make_variants.py) was a no-op — there was no visible
+# URL text to strip. See reports/parser_test_v4_1_real.md for that run.
+#
+# 2026-09-10 (v4.2): Zoeb printed the URLs as visible plain text in the header's right column
+# — "linkedin.com/in/zoebnomi · zoebnomi.com · github.com/zoeb-nomi" — replacing the bare
+# "LinkedIn · Portfolio · GitHub" labels. (The hyperlink annotations are still present underneath,
+# per PyMuPDF page.get_links(), but that's no longer the only way to recover the URLs.) The three
+# link fields below are updated to the bare-domain form that is now actually printed — no
+# "https://" scheme, no "www." — because that is what a parser reading visible text can find;
+# the underlying real URLs (https://www.linkedin.com/in/zoebnomi, https://zoebnomi.com,
+# https://github.com/zoeb-nomi) are unchanged, only how they're rendered in the PDF changed.
+# No other canon field value changed — the résumé body (summary, experience, education, skills)
+# is byte-identical between v4.1 and v4.2 except for that one header line. See reports/parser_test.md
+# for the v4.2 scores and a before/after table vs. v4.1.
+
+name: "Zoeb Nomi"
+email: "zoeb.nomi@gmail.com"
+phone: "+91 86008 16072"
+location: "Bengaluru, India"
+links:
+  linkedin: "linkedin.com/in/zoebnomi"
+  portfolio: "zoebnomi.com"
+  github: "github.com/zoeb-nomi"
+
+roles:
+  - company: "Instead"
+    title: "Product Manager"
+    start: "Sept 2025"
+    end: "Present"
+  - company: "Multiplier"
+    title: "Product Manager"
+    start: "Mar 2025"
+    end: "Sept 2025"
+  - company: "Keka HR"
+    title: "Product Manager"
+    start: "Dec 2022"
+    end: "Mar 2025"
+  - company: "Hurix Digital"
+    title: "Business Analyst"
+    start: "Oct 2021"
+    end: "Oct 2022"
+
+education:
+  - institution: "STOA"
+    credential: "General Management Program"
+    year: "2022"
+  - institution: "MIT Aurangabad"
+    credential: "B.E., Mechanical Engineering"
+    year: "2019"
+
+skills:
+  - "LLM evaluation"
+  - "eval design"
+  - "evaluation frameworks"
+  - "agent evaluation"
+  - "agentic workflows"
+  - "LLM-as-a-judge"
+  - "golden datasets"
+  - "ground-truth & dataset design"
+  - "human-expert annotation programs"
+  - "human-in-the-loop"
+  - "PII-safe data strategy"
+  - "RAG evaluation"
+  - "retrieval quality"
+  - "citation precision/recall"
+  - "failure-mode analysis"
+  - "model benchmarking"
+  - "data-pipeline automation"
+  - "prompt engineering"
+  - "latency/cost optimization"
+  - "Python eval harnesses"
+  - "MCP"
+  - "AI product management"
+  - "product strategy"
+  - "zero-to-one"
+  - "enterprise B2B SaaS"
+  - "roadmapping"
+  - "API & platform PM"
+  - "GTM"
+  - "data-driven prioritization"
+  - "Python"
+  - "Linear"
+  - "Figma"
+  - "Metabase"
+  - "Pendo"
+  - "MongoDB"
+  - "Claude / Claude Code"
+  - "n8n"
+  - "Cursor"
+  - "Git"

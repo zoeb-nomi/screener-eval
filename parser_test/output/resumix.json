@@ -1,0 +1,164 @@
+{
+  "data": {
+    "contact": {
+      "email": "zoeb.nomi@gmail.com",
+      "phone": "+91",
+      "linkedin": "linkedin.com/in/zoebnomi",
+      "github": "github.com/zoeb-nomi"
+    },
+    "summary": "AI Product Manager owning LLM output quality for a production tax-research and filing platform, where a wrong citation or\na wrong line on a return is a compliance risk rather than a UX bug. Built the full quality loop behind the product: a\nself-maintaining 270K+-record primary-law corpus, human-expert golden datasets (Keystone benchmark; Project Evals - tax\nanalysts authoring 2,000 reviewed datasets), & the evaluation layer that turns both into shipped fixes. Also built\nCrossSource , an open-source legal-RAG eval harness. Previously shipped a $2.7M MRR enterprise product.",
+    "experience": [
+      {
+        "startDate": "2025",
+        "endDate": "",
+        "current": true,
+        "title": "Product Manager, Instead Sept 2025",
+        "company": "Present",
+        "highlights": [
+          "Own end-to-end output quality for production tax-research LLM , where wrong citations are a compliance risk: built the",
+          "so regressions are caught before release, not by clients. Holds ~95% citation accuracy on the golden eval set.",
+          "Grounded the model roadmap in evidence, not opinion : structured comparative experiments against three competing"
+        ],
+        "description": "Own end-to-end output quality for production tax-research LLM , where wrong citations are a compliance risk: built the so regressions are caught before release, not by clients. Holds ~95% citation accuracy on the golden eval set. Grounded the model roadmap in evidence, not opinion : structured comparative experiments against three competing"
+      },
+      {
+        "title": "model",
+        "company": "config and prompt decisions each round.",
+        "highlights": [
+          "Pressure-tested the platform against the public TaxCalcBench v2 suite - 1,200+ agent runs (50 cases, federal + 5 states)",
+          "Built Keystone, Instead’s internal benchmark : a 75-case, 7-form golden set (1040/1120S/1065/1120/1041/990/5471 ×",
+          "Designed and run Project Evals, Instead’s human-expert ground-truth program : scenarios seeded from government"
+        ],
+        "description": "Pressure-tested the platform against the public TaxCalcBench v2 suite - 1,200+ agent runs (50 cases, federal + 5 states) Built Keystone, Instead’s internal benchmark : a 75-case, 7-form golden set (1040/1120S/1065/1120/1041/990/5471 × Designed and run Project Evals, Instead’s human-expert ground-truth program : scenarios seeded from government"
+      },
+      {
+        "title": "review as the acceptance gate",
+        "company": "2,000 human-authored, reviewed datasets targeted, benchmarking accuracy per task type",
+        "highlights": [
+          "Built the retrieval foundation the product’s answers stand on - and made it self-maintaining : a 270K+-record corpus of"
+        ],
+        "description": "Built the retrieval foundation the product’s answers stand on - and made it self-maintaining : a 270K+-record corpus of"
+      },
+      {
+        "title": "first",
+        "company": "party primary law (federal and state statutes, regulations, case law and DoR rulings, plus local tax) spanning 230+",
+        "highlights": [
+          "Eliminated the product’s most dangerous failure mode - plausible-but-wrong citations that read as authoritative - by",
+          "Cut workflow latency ~90% (10–15 min → under a minute) by scoping incremental edits to changed inputs only - turning",
+          "Mapped Instead’s e-file coverage against competitors across 6,201 forms in every US jurisdiction (2,540 supported),"
+        ],
+        "description": "Eliminated the product’s most dangerous failure mode - plausible-but-wrong citations that read as authoritative - by Cut workflow latency ~90% (10–15 min → under a minute) by scoping incremental edits to changed inputs only - turning Mapped Instead’s e-file coverage against competitors across 6,201 forms in every US jurisdiction (2,540 supported),"
+      },
+      {
+        "startDate": "Mar 2025",
+        "endDate": "Sept 2025",
+        "current": false,
+        "title": "giving the filing roadmap a per",
+        "company": "jurisdiction gap map.",
+        "highlights": [
+          "Owned the Value-Added Services vertical (procurement, BGV, ITSM, partnerships) and turned it into a revenue line:"
+        ],
+        "description": "Owned the Value-Added Services vertical (procurement, BGV, ITSM, partnerships) and turned it into a revenue line:"
+      },
+      {
+        "startDate": "Dec 2022",
+        "endDate": "Mar 2025",
+        "current": false,
+        "title": "end",
+        "company": "to-end in 21 days.",
+        "highlights": [
+          "Built the Background Verification module zero-to-one (Checkr API) to open Keka’s first international market: onboarded",
+          "Shipped 6 SSO integrations (Azure AD / Google Workspace) to remove enterprise adoption blockers - a 27% adoption lift",
+          "Ran GTM enablement at scale - product training and client webinars (4,400+ attendees) generating 500+ upsell requests"
+        ],
+        "description": "Built the Background Verification module zero-to-one (Checkr API) to open Keka’s first international market: onboarded Shipped 6 SSO integrations (Azure AD / Google Workspace) to remove enterprise adoption blockers - a 27% adoption lift Ran GTM enablement at scale - product training and client webinars (4,400+ attendees) generating 500+ upsell requests"
+      },
+      {
+        "startDate": "Oct 2021",
+        "endDate": "Oct 2022",
+        "current": false,
+        "title": "Business Analyst, Hurix Digital Oct 2021",
+        "company": "Oct 2022",
+        "highlights": [
+          "Led agile transformation of LMS development (43% faster delivery); drove 31% growth in customer conversions via a"
+        ],
+        "description": "Led agile transformation of LMS development (43% faster delivery); drove 31% growth in customer conversions via a"
+      },
+      {
+        "title": "video",
+        "company": "learning rollout.",
+        "highlights": [
+          "Built to prove eval craft in the open, on a domain where citations carry professional consequences: MIT-licensed and"
+        ],
+        "description": "Built to prove eval craft in the open, on a domain where citations carry professional consequences: MIT-licensed and"
+      },
+      {
+        "title": "taxonomy, faithfulness, and answer relevance via an LLM judge blind-validated",
+        "company": "100% human agreement (human",
+        "description": "labeling also caught a harness bug the judge missed). Citation-discipline prompting lifted precision 0.981 → 0.994; recall"
+      },
+      {
+        "title": "(0.760) is retrieval",
+        "company": "capped, not generation-capped.",
+        "description": "SKILLS & TOOLS AI / LLM: LLM evaluation · eval design · evaluation frameworks · agent evaluation · agentic workflows · LLM-as-a-judge · golden datasets · ground-truth & dataset design · human-expert annotation programs · human-in-the-loop · PII-safe data"
+      },
+      {
+        "title": "strategy · RAG evaluation · retrieval quality · citation precision/recall · failure",
+        "company": "mode analysis · model benchmarking ·",
+        "description": "data-pipeline automation · prompt engineering · latency/cost optimization · Python eval harnesses · MCP Product: AI product management · product strategy · zero-to-one · enterprise B2B SaaS · roadmapping · API & platform PM ·"
+      },
+      {
+        "title": "GTM · data",
+        "company": "driven prioritization",
+        "description": "Tools: Python · Linear · Figma · Metabase · Pendo · MongoDB · Claude / Claude Code · n8n · Cursor · Git"
+      }
+    ],
+    "education": [],
+    "skills": [],
+    "certifications": [],
+    "projects": [],
+    "languages": [],
+    "awards": [],
+    "publications": [],
+    "volunteer": []
+  },
+  "metadata": {
+    "pages": 2,
+    "duration": 410,
+    "mode": "rule-based",
+    "sectionsDetected": [
+      "header",
+      "summary",
+      "experience",
+      "education"
+    ],
+    "confidence": 0.67,
+    "layout": "single-column",
+    "warnings": [
+      "No name detected in contact info",
+      "No skills detected",
+      "Experience entry \"model\" has no dates",
+      "Experience entry \"review as the acceptance gate\" has no dates",
+      "Experience entry \"first\" has no dates",
+      "Experience entry \"video\" has no dates",
+      "Experience entry \"taxonomy, faithfulness, and answer relevance via an LLM judge blind-validated\" has no dates",
+      "Experience entry \"(0.760) is retrieval\" has no dates",
+      "Experience entry \"strategy · RAG evaluation · retrieval quality · citation precision/recall · failure\" has no dates",
+      "Experience entry \"GTM · data\" has no dates"
+    ],
+    "completeness": [
+      {
+        "section": "contact",
+        "fieldsExpected": 4,
+        "fieldsPopulated": 2,
+        "percentage": 50
+      },
+      {
+        "section": "experience",
+        "fieldsExpected": 48,
+        "fieldsPopulated": 40,
+        "percentage": 83
+      }
+    ]
+  }
+}

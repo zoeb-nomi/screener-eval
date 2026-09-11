@@ -1,0 +1,20 @@
+[SYNTHETIC PLACEHOLDER JOB DESCRIPTION — for pipeline testing only, not a real posting]
+
+Halden Systems — AI Product Manager (Large Tech, placeholder)
+Location: Austin, TX (open to remote US)
+
+Halden Systems is a fictional large-tech company (placeholder for pipeline testing).
+We're building AI-assisted tools for professional/regulated workflows and need a
+PM who has personally owned output quality for an LLM-powered product, not just
+shipped features around one.
+
+Requirements:
+- Demonstrated ownership of an LLM output-quality or eval program end to end
+- Experience building or managing golden datasets / human-expert annotation
+- Familiarity with retrieval-augmented generation and its failure modes
+- Comfortable being the person who says "this isn't good enough to ship" with data
+  to back it up
+- Prior B2B SaaS product experience
+
+Nice to have: open-source contributions in the eval/benchmarking space, prior
+experience in tax, legal, or financial-services software.

@@ -1,0 +1,47 @@
+# Institution-name swap map for the "institution_swap" ablation.
+# Replicates the design in Iso, Pezeshkpour, Bhutani & Hruschka / Megagon Labs
+# (arXiv 2503.19182): swap only the institution/employer NAME, keep the descriptor
+# line (industry, scale, market position) intact, so the model sees an identical
+# "shape" of employer with a different name-prestige signal.
+#
+# Fictional names were checked with a handful of web searches (not a trademark
+# search) to confirm they are not real, currently operating companies/schools
+# with this exact name. See README.md "Assumptions to confirm" for caveats —
+# re-check before wider publication if you're not comfortable with the residual risk.
+#
+# scripts/make_variants.py does a literal, case-sensitive, whole-phrase
+# replacement of `real_name` -> `fictional_name` across the résumé-A text named
+# in config/config.yaml's paths.resume_a (resume/v4_2_A.txt as of 2026-09-10).
+# Descriptor lines (the italic/context line under each role) are NOT touched —
+# only the proper noun.
+
+swaps:
+  - real_name: "Instead"
+    fictional_name: "Vorlanta"
+    kind: employer
+    note: "AI-native tax research, planning & filing platform — descriptor line unchanged."
+  - real_name: "Multiplier"
+    fictional_name: "Halcyra"
+    kind: employer
+    note: "Global employment platform enabling compliant hiring across 150+ countries — descriptor line unchanged."
+  - real_name: "Keka HR"
+    fictional_name: "Ashvane HR"
+    kind: employer
+    note: "India's leading HR technology platform; $25M+ ARR CoreHR suite — descriptor line unchanged."
+  - real_name: "Hurix Digital"
+    fictional_name: "Quilthorne Digital"
+    kind: employer
+  - real_name: "STOA"
+    fictional_name: "Novendra Institute"
+    kind: education
+    note: "General Management Program (2022) — descriptor unchanged."
+  - real_name: "MIT Aurangabad"
+    fictional_name: "Konasari Institute of Technology"
+    kind: education
+    note: "B.E., Mechanical Engineering (2019) — descriptor unchanged. Not to be confused with MIT (Cambridge, MA); the real institution is 'MIT Aurangabad' (Maharashtra Institute of Technology, Aurangabad campus), an unrelated regional engineering college."
+
+# Fields NOT swapped (tools/vendors named inside bullets, not employer/institution
+# identity signals): Checkr, Azure AD, Google Workspace, TaxCalcBench, PosterElite.
+# Keeping the ablation scoped to the résumé's primary employer/education identity
+# line is the Megagon design; swapping every named vendor would conflate two
+# different manipulations.
