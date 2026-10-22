@@ -8,7 +8,7 @@
 
 885 scored calls, 21 real open US AI PM postings, two cheap-tier screeners, 5 reps
 each, paired and interleaved, 0 parse errors. Swapping every employer on the résumé
-for a fictional one moved the fit score by less than a point on both screeners.
+for a fictional one moved the fit score by about a point at most (+0.07 and −1.14 on the two screeners, both intervals straddling zero).
 Deleting every link moved it by less than a point on both screeners. Which screener
 read it moved the score by 22.3 points on average and flipped the majority verdict
 on 15 of 21 postings. Full write-up, both paired-delta tables, the cross-screener
@@ -151,6 +151,10 @@ employer, employer_class, sha256; 21 are already collected — see
 makes network calls and needs keys the owner holds — it is designed to run on the
 owner's machine, not in this sandbox.
 
+## Privacy note (22 Oct 2026)
+
+The phone number was redacted from the résumé text files, parser outputs and reports, and the three résumé PDFs were removed. Hashes recorded under `results/` refer to the original files; scores and findings are unchanged. To re-run the parser test, put your own résumé PDF at `resume/v4_2.pdf`.
+
 ## Repo layout
 
 ```
@@ -177,7 +181,7 @@ model, condition (A|B), ablation, rep, order_index, fit_score, recommendation, r
 `manifest.json` alongside it records the full config snapshot, model ids, résumé
 and JD sha256 hashes, and start/end timestamps — enough to know exactly what ran.
 
-## Assumptions made here that Zoeb should confirm
+## Assumptions and known limits
 
 - **`resume/v4_2.pdf` is now the harness default** (Google Docs export, the one Zoeb
   uploads to ATSs) — as of 2026-09-10 it replaced `resume/v4_1_real.pdf` (kept for the
