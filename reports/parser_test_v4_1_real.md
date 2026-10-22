@@ -53,7 +53,7 @@ No parser recovers a single fully-formed, clickable URL. This directly undercuts
 |---|---|---|---|---|---|---|
 | contact.name | Zoeb Nomi | ok | ok | ok | wrong | wrong |
 | contact.email | zoeb.nomi@gmail.com | ok | ok | ok | ok | ok |
-| contact.phone | +91 86008 16072 | ok | ok | ok | wrong | ok |
+| contact.phone | [phone redacted] | ok | ok | ok | wrong | ok |
 | contact.location | Bengaluru, India | ok | ok | ok | missing | missing |
 | contact.linkedin | https://www.linkedin.com/in/zoebnomi | missing | missing | missing | missing | missing |
 | contact.portfolio | https://zoebnomi.com | missing | missing | missing | missing | missing |
@@ -98,7 +98,7 @@ No parser recovers a single fully-formed, clickable URL. This directly undercuts
 `diff -u` between the old `resume/v4_1_A.txt` and `pdftotext -layout` output of the real PDF (cleaned of form feeds) shows the body content — every sentence, number, and bullet — is unchanged. All differences are Google-Docs-export artifacts of the same content, not new/different facts:
 
 1. **Header profile links are hyperlink-annotation-only** (the headline finding — see "Evidence links preserved" above). No canon field value changed as a result; the *ground truth* (Zoeb's actual LinkedIn/portfolio/GitHub URLs) is unchanged, but no parser under test can recover it from this file's text layer.
-2. **Two-column header layout.** Line 1 is `ZOEB NOMI` (left) + `Bengaluru, India · +91 86008 16072 · zoeb.nomi@gmail.com` (right); line 2 is the title (left) + the LinkedIn/Portfolio/GitHub labels (right) — merged onto shared lines by `-layout`'s column detection, rather than four separate stacked lines as in the reconstruction. This is what broke resumix's name/phone extraction (see above).
+2. **Two-column header layout.** Line 1 is `ZOEB NOMI` (left) + `Bengaluru, India · [phone redacted] · zoeb.nomi@gmail.com` (right); line 2 is the title (left) + the LinkedIn/Portfolio/GitHub labels (right) — merged onto shared lines by `-layout`'s column detection, rather than four separate stacked lines as in the reconstruction. This is what broke resumix's name/phone extraction (see above).
 3. **Side-by-side education line.** `STOA - General Management Program (2022)` and `MIT Aurangabad - B.E., Mechanical Engineering (2019)` are on one physical line, column-separated by `·`, instead of two stacked lines. No field impact (both values still substring-match), but it's a second instance of the same two-column layout pattern.
 4. **Page break lands inside the Experience section.** The real PDF is 2 pages; page 2 starts exactly at `Product Manager, Keka HR - 3 roles, 2 promotions`. `pdftotext` inserts a form-feed (`\f`) there, stripped before diffing/committing. No content was lost or reordered across the break in any of the three text extractors.
 5. **Typography**: real export uses curly apostrophes (`Instead's` → `Instead’s`), en dashes for date ranges (`Sept 2025 – Present` vs `Sept 2025 - Present`), arrows in place of "to"/"→" in bullets (`flag → classify-by-failure-mode` vs `flag to classify-by-failure-mode`), `•` bullets instead of `-`, `&` instead of some "and"s, non-breaking/zero-width spaces after header labels, and `·` instead of `,` as the skills-list separator. None of this changed any of the 29 canon field values or their match outcomes — `normalize()` handles whitespace/case but was never asked to handle en dashes or curly quotes, since no field value contains them.
