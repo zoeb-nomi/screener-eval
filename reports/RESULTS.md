@@ -171,7 +171,7 @@ the number above is correct. $3.66 is consistent with the approved copy's claim 
 ## Privacy scan
 
 Scanned `results/` and `reports/` for the résumé owner's phone number
-(`86008 16072`) and email (`zoeb.nomi@gmail.com`), and for any model output quoting
+(`[phone redacted]`) and email (`zoeb.nomi@gmail.com`), and for any model output quoting
 more than a sentence of JD text verbatim.
 
 - **`calls.jsonl` (both runs): clean.** Neither the phone number nor the email
