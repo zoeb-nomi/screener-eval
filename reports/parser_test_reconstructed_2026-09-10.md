@@ -31,7 +31,7 @@ node parser_test/node/run_resume_parser.js resume/v4_1.pdf parser_test/output/re
 |---|---|---|---|---|---|---|
 | contact.name | Zoeb Nomi | ok | ok | ok | ok | wrong |
 | contact.email | zoeb.nomi@gmail.com | ok | ok | ok | ok | ok |
-| contact.phone | +91 86008 16072 | ok | ok | ok | wrong | ok |
+| contact.phone | [phone redacted] | ok | ok | ok | wrong | ok |
 | contact.location | Bengaluru, India | ok | ok | ok | wrong | missing |
 | contact.linkedin | https://www.linkedin.com/in/zoebnomi | ok | ok | ok | ok | garbled |
 | contact.portfolio | https://zoebnomi.com | ok | ok | ok | ok | missing |
